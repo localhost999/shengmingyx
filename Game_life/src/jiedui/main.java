@@ -38,7 +38,7 @@ public class main extends Thread {
         jPanel = wind.jPanel;
     }
     
-    //初始函数
+    //界面初始化
     public static void main(String[] args)
     {
 

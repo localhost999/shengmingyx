@@ -1,5 +1,4 @@
 package jiedui;
-import java.util.Random;
 
 public class xibaozt {
 	static boolean[][] dot;

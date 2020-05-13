@@ -1,5 +1,5 @@
 package jiedui;
-import javax.swing.Action;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -10,17 +10,7 @@ import jiedui.show;
 import jiedui.window;
 import jiedui.main;
 
-import java.awt.Color;
-import java.awt.GridLayout;
-import java.awt.Panel;
-import java.awt.Window;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 
 public class main extends Thread {
 	static main start;

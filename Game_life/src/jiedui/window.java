@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 import jiedui.main;
 import jiedui.window.myThread;
-import jiedui.window.continue_one;
+
 import jiedui.window.start;
 import jiedui.window.stop;
 
@@ -25,7 +25,7 @@ import java.awt.FlowLayout;
 
 public class window {
 	JFrame win;
-	static int speed = 15;
+	static int speed = 1500;
 	static int xibao = 0;
 	static int step = 0;
 	static JPanel[][] jPanel;
@@ -35,7 +35,7 @@ public class window {
     static JLabel st;
     static boolean end = true;
     myThread thread = null;
-    static main star;
+    static main start;
 	
 	public window (int row,int col) {
 		win = new JFrame("game of life");
@@ -96,7 +96,7 @@ public class window {
             while(end)
             {
                 xibao = 0;
-                star.jud.judge();
+                start.jud.judge();
                 try {
                     sleep(speed);
                 } catch (InterruptedException e) {
@@ -104,11 +104,11 @@ public class window {
                     e.printStackTrace();
                 }
                 
-                for (int m = 1; m < star.state_one.length - 1; m++)
+                for (int m = 1; m < start.state_one.length - 1; m++)
                 {
-                    for (int n = 1; n < star.state_one[m].length - 1; n++) 
+                    for (int n = 1; n < start.state_one[m].length - 1; n++) 
                     {
-                        if (star.state_one[m][n]==true) {
+                        if (start.state_one[m][n]==true) {
                             xibao ++;
                         }
                     }
@@ -117,7 +117,7 @@ public class window {
                 number.setText("Number of remaining lives: "+xibao+"               ");
                 st.setText("step: "+step);
                 
-                star.ld.paint();
+                start.ld.paint();
                 
                 if (xibao==0) {
                     end = false;
@@ -135,10 +135,10 @@ public class window {
         public void actionPerformed(ActionEvent e) {
          
             if (pattern==1) {
-                star.cs.Init();
+                start.cs.Init();
             }
          
-            star.ld.paint();
+            start.ld.paint();
             xibao = 0;
             step = 0;
             end = true;

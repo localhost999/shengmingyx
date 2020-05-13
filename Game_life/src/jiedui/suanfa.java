@@ -14,7 +14,7 @@ public class suanfa {
     
     //中心生命的状态并更新
     public void judge() {
-    int life = 0;
+   
         for (int i = 1; i < state_one.length - 1; i++) {
             for (int j = 1; j < state_one[i].length - 1; j++) {
                 //循环判断中心生命周围的各个点的状态

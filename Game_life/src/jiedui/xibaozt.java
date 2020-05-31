@@ -1,5 +1,6 @@
 package jiedui;
 
+
 public class xibaozt {
 	static boolean[][] dot;
 	static int rand;

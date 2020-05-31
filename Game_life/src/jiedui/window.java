@@ -89,6 +89,8 @@ public class window {
         win.setVisible(true);
 	}
 
+
+
 	class myThread extends Thread{
         public myThread()    {    
         }
@@ -176,3 +178,4 @@ public class window {
          
      }
 }
+

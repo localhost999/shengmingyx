@@ -5,48 +5,51 @@ import javax.swing.JPanel;
 public class suanfa {
 	static boolean [][] state_one;
     JPanel[][] jPanel;
-    //初始化类
+
     public suanfa(boolean [][] state,JPanel[][] jpanel_one)
     {
         state_one = state;
         jPanel = jpanel_one;
     }
     
-    //中心生命的状态并更新
+
     public void judge() {
-   
+        
+        //循环每一个细胞，计数周围细胞个数
         for (int i = 1; i < state_one.length - 1; i++) {
             for (int j = 1; j < state_one[i].length - 1; j++) {
-                //循环判断中心生命周围的各个点的状态
-                int nCount = 0;
-                if (jPanel[i - 1][j - 1].getBackground() == Color.black) {
-                    nCount++;
+                int count = 0;
+                if (jPanel[i-1][j-1].getBackground() == Color.black) {
+                    count++;
                 }
-                if (jPanel[i - 1][j].getBackground() == Color.black) {
-                    nCount++;
+                if (jPanel[i-1][j].getBackground() == Color.black) {
+                    count++;
                 }
-                if (jPanel[i - 1][j + 1].getBackground() == Color.black) {
-                    nCount++;
+                if (jPanel[i-1][j+1].getBackground() == Color.black) {
+                    count++;
                 }
                 if (jPanel[i][j - 1].getBackground() == Color.black) {
-                    nCount++;
+                    count++;
                 }
                 if (jPanel[i][j + 1].getBackground() == Color.black) {
-                    nCount++;
+                    count++;
                 }
                 if (jPanel[i + 1][j - 1].getBackground() == Color.black) {
-                    nCount++;
+                    count++;
                 }
                 if (jPanel[i + 1][j].getBackground() == Color.black) {
-                    nCount++;
+                    count++;
                 }
                 if (jPanel[i + 1][j + 1].getBackground() == Color.black) {
-                    nCount++;
+                    count++;
                 }
-                if (nCount==3) {
+                
+                
+                //状态判断
+                if (count==3) {
                     state_one[i][j] = true;
                 }
-                else if (nCount == 2) {
+                else if (count == 2) {
                     state_one[i][j] = state_one[i][j];
                 }
                 else 
